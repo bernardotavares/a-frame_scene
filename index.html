@@ -8,11 +8,11 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
 </head>
 <body>
-    <div style="width:100px; height:100px; background-color:green">
-        teste
-    </div>
     <a-scene>
-        <a-entity position="0 0 -3" rotation="0 45 0">
+        <a-assets>
+                <img id="ground" src="brick.jpg">
+        </a-assets>
+        <a-entity position="0 0 -5" rotation="0 0 0">
             <a-box
                 scale="0.1 5 0.1"
                 color="gray">
@@ -31,7 +31,9 @@
                 position="0 2.42 1.3"
                 color="yellow">
             <a-sphere>
-        <a-entity>
+
+        <a-plane src=#ground  width="100" height="100" position="0 -40 0" rotation="-90 0 0"></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
     </a-scene>
 </body>
 </html>
